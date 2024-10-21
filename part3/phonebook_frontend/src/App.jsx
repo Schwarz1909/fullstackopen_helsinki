@@ -70,6 +70,10 @@ const App = () => {
           setMessage(`${personObject.name} is added`)
           setTimeout(() => {setMessage('')}, 5000)
         })
+        .catch(error => {
+          console.log(error.response.data.error)
+          setMessage(error.response.data.error)
+        })
       //console.log(persons)
     }
     
